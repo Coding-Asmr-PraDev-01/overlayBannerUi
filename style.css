@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --gradient-1: rgba(227, 32, 181, 0.9);
+    --gradient-2: rgba(9, 126, 228, 0.8);
+    --color-white: #fff;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+    font-size: 85%;
+}
+
+body{
+    position: relative;
+}
+
+.mainHeading{
+    font-size: 3rem;
+    line-height: 1.2;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.4rem;
+}
+
+.contentBx{
+    padding: 3rem;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+.overlayBx{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, var(--gradient-1), var(--gradient-2)); 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4.5rem;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.overlayBx .signupText{
+    margin-bottom: 1.4rem;  
+    color: var(--color-white);
+}
+
+.emailText{
+    margin: 5rem 0;
+    color: var(--color-white);
+}
+
+.overlayBx .heading {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.overlayBx .heading h1{
+    font-size: 3.5rem;
+    color: var(--color-white);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.overlayBx .logoBxs{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: var(--color-white);
+    gap: 2.2rem;
+    padding: 2rem 3rem;
+    border-radius: 6rem;
+}
+
+.overlayBx .logoBxs .logoBx{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.overlayBx .logoBxs .logoBx img{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlayBx .featuresBx{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1.8rem;
+}
+
+.overlayBx .featuresBx .featureBx{
+    color: var(--color-white);
+    text-align: center;
+    padding: 1rem 2.4rem;
+    border: 1px solid var(--color-white);
+    border-radius: 0.5rem;
+}
+
+.overlayBx .featuresBx .featureBx h2{
+    font-size: 2rem;
+}
+
+.crossBtn{
+    position: absolute;
+    font-size: 3rem;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+    color: var(--color-white);
+}
+
+
+@media(max-width: 991px){
+    html{
+        font-size: 80%;
+    }
+
+    .overlayBx .featuresBx{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .overlayBx .heading h1{
+        font-size: 3rem;
+    }  
+}
